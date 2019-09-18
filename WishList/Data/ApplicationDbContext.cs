@@ -9,8 +9,9 @@ namespace WishList.Data
 {
     public class ApplicationDbContext : DbContext
     {
-        public DbSet<Item> Items;
-        ApplicationDbContext(DbContextOptions options): base(options)
+        public DbSet<Item> Items { get; }
+
+        ApplicationDbContext(DbContextOptions<ApplicationDbContext> options): base(options)
         {
 
         }
